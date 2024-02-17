@@ -27,31 +27,6 @@
   ],
   "users": [
     {
-      "id": 1,
-      "email": "pupelis.ignas@gmail.com",
-      "slaptazodis": "aha"
-    },
-    {
-      "id": "e66047ac-edf6-4046-a3a7-4a60bbf74597",
-      "vartotojoVardas": "ignas",
-      "email": "pupelis.ignas@gmail.coma",
-      "slaptazodis": "$2a$08$AM9u6Ucsg8S7VH1NLUgt/e/ajZmKYJp3XfjuQJKgIOD0ir736FVCS",
-      "amzius": 22,
-      "registracijosData": "2024-02-17",
-      "profilioNuotrauka": "https://thinksport.com.au/wp-content/uploads/2020/01/avatar-.jpg",
-      "likedIds": ""
-    },
-    {
-      "id": "89f21a9a-6ce9-4d93-afaf-fe07ed89c705",
-      "vartotojoVardas": "ignasa",
-      "email": "pupelis.ignas@gmail.comaaa",
-      "slaptazodis": "$2a$08$P5N0agc.j/U0Ic0/Qv7qB.JkT9kMJqFZxbTx/oSz.MxlTCtxCxPyq",
-      "amzius": 22,
-      "registracijosData": "2024-02-17",
-      "profilioNuotrauka": "https://thinksport.com.au/wp-content/uploads/2020/01/avatar-.jpg",
-      "likedIds": ""
-    },
-    {
       "id": "8492207e-5221-4df5-90a7-4d9f2a2ade62",
       "vartotojoVardas": "admin",
       "email": "admin@admin.lt",
