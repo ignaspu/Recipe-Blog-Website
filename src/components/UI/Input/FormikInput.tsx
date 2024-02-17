@@ -2,7 +2,7 @@ const FormikInput = ({ type, name, formik, placeholder }: {type:any, name:any, f
   return (
     <div>
       <input
-        className="form-control"
+        className="form-control mb-3"
         type={type}
         name={name} id={name}
         value={formik.values[name]}

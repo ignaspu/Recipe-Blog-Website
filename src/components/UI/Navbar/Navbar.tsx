@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
+import UsersContext from "../../../context/UsersContext";
+import { useContext } from "react";
 
 const Navbar = () => {
+
+  const { loggedInUser } = useContext(UsersContext);
+
   return (
     <header>
       <nav className="navbar bg-body-tertiary fixed-top">
@@ -16,21 +21,11 @@ const Navbar = () => {
             </div>
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">Namai</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Receptai</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Apie mus</a>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/prisijungti">Prisijungti</Link>
-                </li>
+                {
+                  loggedInUser &&
                 <li className="nav-item dropdown">
                   <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
+                    Vartotojo meniu
                   </a>
                   <ul className="dropdown-menu">
                     <li><a className="dropdown-item" href="#">Action</a></li>
@@ -38,8 +33,21 @@ const Navbar = () => {
                     <li>
                       <hr className="dropdown-divider" />
                     </li>
-                    <li><a className="dropdown-item" href="#">Something else here</a></li>
+                    <li><a className="dropdown-item" href="#">Atsijungti</a></li>
                   </ul>
+                </li>
+                }
+                <li className="nav-item">
+                  <Link className="nav-link active" to="/">Namai</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/receptai">Receptai</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/apie">Apie mus</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/prisijungimas">Prisijungti</Link>
                 </li>
               </ul>
               <form className="d-flex mt-3" role="search">

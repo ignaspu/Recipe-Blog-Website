@@ -49,6 +49,7 @@ const reducer = (state:any, action:any) => {
 
 const UsersProvider =  ({ children} : any) => {
   
+  const [loggedInUser, setLoggedInUser] = useState();
   
   const [users, setusers] = useReducer(reducer, []);
 
@@ -67,7 +68,7 @@ const UsersProvider =  ({ children} : any) => {
   }, []);
 
   return (
-    <UsersContext.Provider value={{users}}>
+    <UsersContext.Provider value={{users, setusers, UsersActionTypes, setLoggedInUser, loggedInUser}}>
     {children}
   </UsersContext.Provider>
   );

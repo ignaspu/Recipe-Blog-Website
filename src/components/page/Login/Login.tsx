@@ -59,7 +59,7 @@ const Login = () => {
           formik={formik}
           placeholder="Įveskite slaptažodį"
         />
-        <button type="submit" className="btn btn-outline-primary mt-3 mb-3 me-3">Prisijungti</button>
+        <button type="submit" className="btn btn-outline-primary me-3">Prisijungti</button>
         <Link to="/registracija"><button type="button" className="btn btn-outline-info">Registruotis</button></Link><br/>
       </form>
       {
