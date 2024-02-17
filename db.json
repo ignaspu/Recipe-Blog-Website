@@ -59,7 +59,8 @@
       "amzius": 22,
       "registracijosData": "2024-02-17",
       "profilioNuotrauka": "https://thinksport.com.au/wp-content/uploads/2020/01/avatar-.jpg",
-      "likedIds": ""
+      "likedIds": "",
+      "admin": true
     }
   ]
 }

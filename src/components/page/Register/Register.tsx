@@ -99,7 +99,7 @@ const Register = () => {
           amzius: values.amzius,
           registracijosData: new Date().toISOString().slice(0, 10),
           profilioNuotrauka: values.profilioNuotrauka ? values.profilioNuotrauka : 'https://thinksport.com.au/wp-content/uploads/2020/01/avatar-.jpg',
-          likedIds: ''
+          admin: false
         };
         setusers({
           type: UsersActionTypes.add,

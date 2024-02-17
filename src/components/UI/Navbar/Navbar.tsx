@@ -4,7 +4,11 @@ import { useContext } from "react";
 
 const Navbar = () => {
 
-  const { loggedInUser } = useContext(UsersContext);
+  const { loggedInUser, setLoggedInUser, isAdmin } = useContext(UsersContext);
+  console.log(loggedInUser)
+  const handleLogout = () => {
+    setLoggedInUser(false);
+  }
 
   return (
     <header>
@@ -23,19 +27,24 @@ const Navbar = () => {
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                 {
                   loggedInUser &&
-                <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Vartotojo meniu
-                  </a>
-                  <ul className="dropdown-menu">
-                    <li><a className="dropdown-item" href="#">Action</a></li>
-                    <li><a className="dropdown-item" href="#">Another action</a></li>
-                    <li>
-                      <hr className="dropdown-divider" />
-                    </li>
-                    <li><a className="dropdown-item" href="#">Atsijungti</a></li>
-                  </ul>
-                </li>
+                  <li className="nav-item dropdown">
+                    <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Sveiki, {loggedInUser.vartotojoVardas}
+                    </a>
+                    <ul className="dropdown-menu">
+                      <li><a className="dropdown-item" href="#">Profilis</a></li>
+                      <li><a className="dropdown-item" href="#">Mano receptai</a></li>
+                      <li><a className="dropdown-item" href="#">Pridėti receptą</a></li>
+                      {
+                        loggedInUser.admin &&
+                        <li><a className="dropdown-item" href="#">Administracija</a></li>
+                      }
+                      <li>
+                        <hr className="dropdown-divider" />
+                      </li>
+                      <li><a className="dropdown-item" onClick={handleLogout}>Atsijungti</a></li>
+                    </ul>
+                  </li>
                 }
                 <li className="nav-item">
                   <Link className="nav-link active" to="/">Namai</Link>
@@ -46,9 +55,12 @@ const Navbar = () => {
                 <li className="nav-item">
                   <Link className="nav-link" to="/apie">Apie mus</Link>
                 </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/prisijungimas">Prisijungti</Link>
-                </li>
+                {
+                  !loggedInUser &&
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/prisijungimas">Prisijungti</Link>
+                  </li>
+                }
               </ul>
               <form className="d-flex mt-3" role="search">
                 <input className="form-control me-2" type="search" placeholder="Ką norite surasti?" aria-label="Search" />
