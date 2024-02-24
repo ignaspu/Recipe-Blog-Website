@@ -1,7 +1,7 @@
-import Cards from "../../Cards/Cards";
-import Hero from "../Hero/Hero";
-import LatestRecipe from "../LatestRecipe/LatestRecipe";
-import PopCategories from "../PopCategories/PopCategories";
+import Cards from "../../UI/Cards/Cards";
+import Hero from "../../UI/Hero/Hero";
+import LatestRecipe from "../../UI/LatestRecipe/LatestRecipe";
+import PopCategories from "../../UI/PopCategories/PopCategories";
 
 const Main = () => {
   return ( 

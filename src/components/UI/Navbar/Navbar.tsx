@@ -37,7 +37,7 @@ const Navbar = () => {
                       <li><a className="dropdown-item" href="#">Pridėti receptą</a></li>
                       {
                         loggedInUser.admin &&
-                        <li><a className="dropdown-item" href="#">Administracija</a></li>
+                        <li><Link className="dropdown-item" to="/admin">Administracija</Link></li>
                       }
                       <li>
                         <hr className="dropdown-divider" />

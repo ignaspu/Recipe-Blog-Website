@@ -1,18 +1,18 @@
 import { useContext } from "react";
-import Latest from "./Latest";
 import CardContext from "../../../context/CardContext";
+import Card from "../Card/Card";
 
-const LatestRecipe = () => {
+const Cards = () => {
 
   const { cards } = useContext(CardContext);
 
   return (
-    <section className="bg-body mb-3">
-      <p className="h1 p-3 text-center">Naujausi receptai</p>
+    <section className="bg-body-secondary pb-3">
+      <p className="h1 p-3 text-center">Skaniausi receptai</p>
       <div className="d-flex justify-content-center gap-2 flex-wrap">
         {cards.map((item: any) => {
           return (
-            <Latest key={item.id} data={item} />
+            <Card key={item.id} data={item} />
           );
         })}
       </div>
@@ -23,4 +23,4 @@ const LatestRecipe = () => {
   );
 }
 
-export default LatestRecipe;
+export default Cards;
