@@ -1,8 +1,14 @@
+import styled from "styled-components";
+
+const StyledMain = styled.main`
+margin-top: 80px;
+`;
+
 const Recipes = () => {
   return ( 
-    <section>
+    <StyledMain>
       <h1>Visi receptai</h1>
-    </section>
+    </StyledMain>
    );
 }
  
