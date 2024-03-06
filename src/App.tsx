@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import Register from './components/page/Register/Register';
 import Admin from './components/page/admin/Admin';
 import Recipes from './components/page/Recipes/Recipes';
+import MyRecipes from './components/page/myRecipes/MyRecipes';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="registracija" element={<Register />} />
         <Route path="admin" element={<Admin />} />
         <Route path="receptai" element={<Recipes />} />
+        <Route path="manoreceptai" element={<MyRecipes />} />
       </Routes>
     </>
   );
