@@ -33,7 +33,9 @@ const Navbar = () => {
                     </a>
                     <ul className="dropdown-menu">
                       <li><a className="dropdown-item" href="#">Profilis</a></li>
-                      <li><a className="dropdown-item" href="#">Mano receptai</a></li>
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/manoreceptai">Mano receptai</Link>
+                      </li>
                       <li><a className="dropdown-item" href="#">Pridėti receptą</a></li>
                       {
                         loggedInUser.admin &&
